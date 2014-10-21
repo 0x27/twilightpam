@@ -3,6 +3,8 @@ twilightpam
 
 Python-PAM 2-Factor Authentication using Twilio
 
+## WARNING: DO NOT USE THIS IN A PRODUCTION ENVIRONMENT. AT THE MOMENT IT HAS A HABIT OF "FAILING OPEN" IF THE SCRIPT BUGS OUT. WHICH COULD HAPPEN DUE TO REASONS. WILL UPDATE WHEN THIS IS FIXED
+
 # What?
 After reading the sourcecode for [Stampauth][stampauth] by [Chokepoint][chokepoint] I decided it would be nice to expand it to use the Twilio API to send SMS messages, as the txtdrop solution they were using did not support Ireland. I also had a need to test out the Twilio API for an upcoming project.
 
@@ -46,7 +48,7 @@ sudo usermod user -c ',,+353851234567,'
 Assuming all goes to plan, after you restart sshd, next time you try log in it *should* send you a SMS message with a one time key for the second factor in authentication.
 
 # Bugs
-None known of yet, make an issue if you find any :)
+Fails "open" if script bugs out. Am working on fixing this without locking out of box forever.
 
 # Licence
 Licenced under the [WTFPL][wtfpl] because I don't give a fuck what you do.
