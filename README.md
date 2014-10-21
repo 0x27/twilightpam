@@ -22,7 +22,7 @@ $ cd twilightpam
 $ sudo cp twilightpam.py /lib/security/
 ```
 
-Next edit the "sender_phone", "account_sid", "auth_token" lines in /lib/security/twilightpam.py
+Next edit the "sender", "account_sid", "auth_token" lines in /lib/security/twilightpam.py
 
 Next we configure the sshd config for using this auth.
 
