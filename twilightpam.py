@@ -19,12 +19,12 @@ import syslog
 # Globals: Dirty.
 account_sid = "ACXXXXXXXXXXXXXXXXX"
 auth_token = "YYYYYYYYYYYYYYYYYY"
-sender_phone = "000000000000000"
+sender = "000000000000000"
 
 
 def send_sms(phone, pin):
     client = TwilioRestClient(account_sid, auth_token)
-    message = client.messages.create(to=phone, from_==sender_phone, body=pin)
+    message = client.messages.create(to=phone, from_==sender, body=pin)
 
 def auth_log(msg):
 	"""Send errors to default auth log"""
